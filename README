@@ -1,0 +1,23 @@
+        <script type="text/javascript" src="EventEmitter.js">
+        </script>
+        <script>
+            function TestClass(){
+                EventEmitter.call(this);   //extends.
+                var self = this;
+                this.testMethod = function(){
+                    self.emit("event1", "my text");    // call listener for event1.
+                }
+            }
+            
+            var myobj = new TestClass();
+            
+            var num = myobj.on("event1", function(arg1){ // add listener 1
+                document.write("listener1:"+arg1);  // you can do something.
+            });
+            
+            var num = myobj.on("event1", function(arg1){ // add listener 2
+                document.write("listener2:"+arg1); // you can do something.
+            });
+            
+            myobj.testMethod(); // run code, then run listner1 and listener2.
+        </script>
