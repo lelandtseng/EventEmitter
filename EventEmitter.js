@@ -1,5 +1,5 @@
 function EventEmitter(){
-    var map = new Object;    
+    var map = new Object ;    
     var listenernum = new Object;    
     this.on = function(eventname, listener){
         if (map[eventname]) 
