@@ -41,8 +41,8 @@ function EventEmitter(){
             self.emit("error", "removeListener() first argument must String type.");
             return;
         }
-        if (!(listener instanceof Function)) {
-            self.emit("error", "removeListener() second argument must Function type.");
+        if (typeof listenernum != "string") {
+              self.emit("error", "removeListener() second argument must String type.");
             return;
         }
         delete map[eventname][listenernum];

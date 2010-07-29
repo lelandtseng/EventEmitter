@@ -38,10 +38,17 @@
              document.write(eventname);
              });
              */
+			
+			var num1 = myobj.on("xchange", function(x){
+                document.write("hahah x = " + x+"<br>");
+            });
+			
             var num2 = myobj.on("xchange", function(x){
                 document.write("x is change! now x = " + x+"<br>");
+				this.removeListener("xchange",num2);
             });
             
+			//myobj.removeListener("xchange",num2);
             
             
             myobj.setX(12); //change X,then trigger 'xchange' event.
