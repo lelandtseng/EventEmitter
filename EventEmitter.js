@@ -3,7 +3,7 @@ function EventEmitter(){
     var listenernum = new Object;
     
     this.addListener = function(eventname, listener){
-        this.on(evnntname, listener);
+        this.on(eventname, listener);
     }
     
     this.on = function(eventname, listener){
