@@ -2,6 +2,9 @@ function EventEmitter(){
     var map = new Object;
     var listenernum = new Object;
     
+    this.addListener = function(eventname, listener){
+        this.on(evnntname, listener);
+    }
     
     this.on = function(eventname, listener){
         var self = this;
@@ -42,7 +45,7 @@ function EventEmitter(){
             return;
         }
         if (typeof listenernum != "string") {
-              self.emit("error", "removeListener() second argument must String type.");
+            self.emit("error", "removeListener() second argument must String type.");
             return;
         }
         delete map[eventname][listenernum];
