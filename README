@@ -9,6 +9,7 @@
                 }
             }
             
+            // test
             var myobj = new TestClass();
             
             var num = myobj.on("event1", function(arg1){ // add listener 1
